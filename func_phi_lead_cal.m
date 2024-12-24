@@ -6,9 +6,9 @@ Cs_fres = freqresp(Cs,omega_c);
 angle_Cs = angle(Cs_fres);
 if omega_alpha ==0
     Lambda = omega_c^2 + omega_alpha^2;
-    phi_lambda = atan((cos(2*angle_Cs)+1)/((1+gamma)*pi/(2*(1-gamma))-sin(2*angle_Cs)));
-    angle_C1 = phi_lambda-pi/2;
-    angle_C1_0 =  atan(4*(1-gamma)/((1+gamma)*pi))-pi/2;
+    phi_lambda = atan((sin(2*angle_Cs)-(1+gamma)*pi/(2*(1-gamma)))/(cos(2*angle_Cs)+1));
+    angle_C1 = phi_lambda;
+    angle_C1_0 =  atan((-(1+gamma)*pi)/4/(1-gamma));
     phi_lead = rad2deg(angle_C1-angle_C1_0);
     % rad2deg(angle_C1_0) uncomment for test
 elseif omega_alpha > 0
