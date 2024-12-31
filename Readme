@@ -1,1 +1,2 @@
-func_phi_lead_cal.m is the function for calculating the phase lead of the shaped reset control compared to the reset control without shaping filter.
+"case_studies.m" corresponds to the two case studies discussed in the paper. Simply run it directly.  
+"func_phi_lead_cal.m" is a function designed to calculate the phase lead introduced by the shaped reset control compared to the reset control without a shaping filter.
